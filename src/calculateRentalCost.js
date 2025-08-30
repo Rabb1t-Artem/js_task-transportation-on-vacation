@@ -10,12 +10,12 @@ function calculateRentalCost(days) {
   const SHORT_TERM_DISCOUNT = 20;
   const RESULT = days * 40;
 
-  if (days >= SHORT_TERM_THRESHOLD && days < 7) {
-    return RESULT - SHORT_TERM_DISCOUNT;
-  }
-
   if (days >= LONG_TERM_THRESHOLD) {
     return RESULT - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= SHORT_TERM_THRESHOLD && days < 7) {
+    return RESULT - SHORT_TERM_DISCOUNT;
   }
 
   return RESULT;
